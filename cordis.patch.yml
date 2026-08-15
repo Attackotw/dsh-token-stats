@@ -1,0 +1,8 @@
+# @dsh-external/dsh-token-stats bundle 层：插入插件行。
+# `dsh plugin --profile web add @dsh-external/dsh-token-stats` 安装后，
+# CLI 会识别此 dsh.bundle.patch 声明并把本包追加进 dsh.profile.bundles，
+# profile 启动时合并此 patch，装配 host(lib/index.js) + client(lib/client.js)。
+- insert:
+    - id: dsh-token-stats
+      name: '@dsh-external/dsh-token-stats'
+      config: {}
